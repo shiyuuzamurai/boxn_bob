@@ -1,5 +1,6 @@
 #header-glb-nav ul {
-    margin-top: 60px; 
+    /*margin-top: 60px;*/
+    margin-top: 3.75em
 }
 #header h1.topLink {
 	position: absolute;
@@ -7,12 +8,12 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px;
+	padding: 1.25em;
 	text-align: center;
 }
 #header h1.topLink a {
 	display: block;
-	width: 376px;
+	width: 23.5em;
 	margin: 0 auto;
 }
 #header h1.topLink img {
@@ -34,7 +35,7 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 30px;
+    padding: 1.875em;
     text-align: center;
 }
 
@@ -45,7 +46,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 0.9375em;
 }
 
 nav ul li a {
@@ -54,7 +55,7 @@ nav ul li a {
 }
 
 section {
-    padding: 20px;
+    padding: 1.25em;
     flex: 1; /* メインコンテンツがフッターを押し下げるように設定 */
 }
 
@@ -62,8 +63,8 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    padding-top: 10px;
+    padding: 0.6250em 0;
+    padding-top: 0.6250em;
     width: 100%;
     position: relative; /* 相対位置で配置 */
     z-index: 2; 
@@ -83,19 +84,35 @@ img {
 #about h2 {
     font-size:4em;       /* 文字サイズを大きく */
     font-weight: bold;    /* 太字 */
-    margin-bottom: 15px;  /* 下の余白を少し広く */
+    margin-bottom: 0.9375em;  /* 下の余白を少し広く */
     color: #333333;       /* 見出しの色 */
+}
+
+@media (max-width: 600px) {
+    #about h2 {
+        font-size: 20px;    /* スマホの画面では文字サイズを小さく */
+    }
+}
+
+/* タブレット用メディアクエリ */
+@media (min-width: 601px) and (max-width: 900px) {
+    #about h2 {
+        font-size: 25px;    /* タブレットの画面では文字サイズを調整 */
+    }
 }
 
 /* aboutセクション内のリストサイズ調整 */
 #about ul {
-    font-size: 1.2em; /* 文字サイズを少し大きく */
+    font-size: 120%; /* 文字サイズを少し大きく */
     line-height: 1.6; /* 行間を少し広く */
 }
 
 #about ul li strong {
     font-size: 1.2em; /* ラベル部分をさらに少し大きく */
 }
+
+
+
 /* 背景専用のdivを設定 */
 #background {
     position: fixed;              /* スクロール時に固定 */
@@ -118,17 +135,18 @@ img {
     position: relative;             /* コンテンツの位置調整 */
     z-index: 1;                     /* 背景より手前に配置 */
     background-color: rgba(255, 255, 255, 0.8); /* 背景に半透明の白色を追加 */
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;             /* 見やすさのための丸みを追加 */
+    padding: 1.25em;
+    margin: 1.25em;
+    border-radius: 0.6250em;             /* 見やすさのための丸みを追加 */
 }
 
 #main.bg-1 {
-    margin: -2px;
+    margin: -0.1250em;
 }
 
+
 .character-section {
-    padding: 20px;
+    padding: 1.25em;
 }
 
 .character-container {
@@ -137,13 +155,27 @@ img {
 }
 
 .character-image {
-    width: 800px; 
+    width: 50%; 
     height: auto;
-    margin-right: 20px;
+    margin-right: 1.25em;
 }
 
 .character-details {
-    max-width: 600px; /* 調整したい幅に変更 */
+    max-width: 50%; /* 調整したい幅に変更 */
+}
+
+/* スマホ用メディアクエリ */
+@media (max-width: 600px) {
+    .character-details {
+        max-width: 50%; /* スマホでの幅を90%に変更 */
+        max-height: 50%;
+        padding: 0.5em; /* パディングを小さくしてスペースを節約 */
+    }
+
+    .character-details li {
+        font-size: 10%; /* フォントサイズを小さめに */
+        margin-bottom: 0.1em; /* 各項目の間隔を調整 */
+    }
 }
 
 .character-details ul {
@@ -154,9 +186,9 @@ img {
 .character-details li {
     font-size: 1.1em; /* フォントサイズを少し大きく */
     line-height: 1.6;
-    margin-bottom: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #ddd; /* 下線を追加して区切り */
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 0.0625em solid #ddd; /* 下線を追加して区切り */
 }
 
 .character-details li strong {
@@ -166,10 +198,10 @@ img {
 
 /* 背景に軽いアクセントカラー */
 .character-details {
-    padding: 20px;
+    padding: 1.25em;
     background-color: #f9f9f9; /* 背景色 */
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+    border-radius: 0.5em;
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
 }
 
 .character-details li:last-child {
@@ -178,18 +210,18 @@ img {
 
 .character-details {
     padding-top: 0; /* 必要に応じて */
-    margin-top: -100px; /* リスト全体を上に配置 */
+    margin-top: -6.25em; /* リスト全体を上に配置 */
 }
 
 /* リスト全体の余白と配置を調整 */
 .character-details ul {
     margin-top: 0; /* 必要に応じて追加 */
-    padding-top: 5px; /* 余白調整 */
+    padding-top: 0.3125em; /* 余白調整 */
 }
 
 /* 各リスト項目の上マージンを調整 */
 .character-details li {
-    margin-top: 5px; /* 上に寄せる */
+    margin-top: 0.3125em; /* 上に寄せる */
 }
 
 /* リスト全体の下マージンを消す */
@@ -212,31 +244,33 @@ img {
 /* 全体のスタイル */
 #gallery {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.25em;
 }
 
 /* リンクボックスのグリッドレイアウト */
 .link-box-container {
-    width: 100%;
+    position: relative;  
+    width:100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 横に5列配置 */
-    gap: 10px;
-    max-width: 1000px;
+    gap: 0.6250;
+    max-width: 80%;
     margin: 0 auto;
 }
 
 /* 各リンクボックスのスタイル */
 .link-box {
+    position: relative;  
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #888;
     color: white;
-    padding: 20px;
+    padding: 1.25em;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
-    border: 2px solid #ddd;
+    border: 1.25em solid #ddd;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -254,27 +288,27 @@ img {
 /* セクション全体のスタイル */
 #dialy {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.25em;
 }
 
 /* 日記コンテナを中央に配置し、カードを並べる */
 .diary-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.25em;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 62.5em;
     margin: 0 auto;
 }
 
 /* 各日記カードのスタイル */
 .diary-card {
     background-color: hwb(0 94% 5%);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 300px;
+    border: 0.0625em solid #ddd;
+    border-radius: 0.5em;
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    padding: 2.5em;
+    width: 18.75em;
     transition: transform 0.3s;
 }
 
@@ -316,3 +350,112 @@ img {
     color: #ff6347; /* ホバー時の色を変更 */
 }
 
+
+.character-section {
+    display: flex;
+    flex-direction: column; /* 縦並び */
+    align-items: center; /* 中央揃え */
+}
+
+.character-container {
+    display: flex;
+    flex-wrap: wrap; /* コンテンツが狭い場合に折り返し */
+    justify-content: center; /* 中央揃え */
+}
+
+.character-details {
+    max-width: 90%; /* スマホで幅を調整 */
+    flex: 1 1 300px; /* 最小幅300px、スペースに応じて拡大 */
+    margin: 1em; /* 間隔を追加 */
+}
+
+.character-image {
+    max-width: 90%; /* スマホで幅を調整 */
+    flex: 1 1 300px; /* 最小幅300px、スペースに応じて拡大 */
+    margin: 1em; /* 間隔を追加 */
+}
+
+@media (max-width: 600px) {
+    .character-details, .character-image {
+        max-width: 100%; /* 幅を100%にして全体に広げる */
+        flex: 1 1 auto; /* フレキシブルな幅調整 */
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* 均等にスペースを配置 */
+    flex-wrap: wrap; /* 要素が収まらない場合に折り返しを有効に */
+}
+
+nav a {
+    flex: 1 1 auto; /* 自動的に幅を調整して均等に配置 */
+    text-align: center; /* テキストを中央揃え */
+    padding: 0.5em; /* 余白を追加 */
+    white-space: nowrap; /* テキストが折り返されないように */
+}
+
+/* スマホ用メディアクエリ */
+@media (max-width: 600px) {
+    nav {
+        justify-content: space-around; /* スペースの配置を調整 */
+    }
+}
+
+.link-box-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* デフォルトは5列配置 */
+    gap: 0.625em; /* セル間の隙間 */
+    max-width: 80%;
+    margin: 0 auto; /* 中央揃え */
+}
+
+/* スマホ用メディアクエリ */
+@media (max-width: 600px) {
+    .link-box-container {
+        grid-template-columns: repeat(2, 1fr); /* スマホでは2列に変更 */
+        max-width: 90%; /* 幅を調整して中央揃え */
+        margin: 0 auto; /* 中央揃え */
+    }
+}
+
+/* タブレット用メディアクエリ */
+@media (min-width: 601px) and (max-width: 900px) {
+    .link-box-container {
+        grid-template-columns: repeat(3, 1fr); /* タブレットでは3列に変更 */
+        max-width: 90%; /* 幅を調整して中央揃え */
+        margin: 0 auto; /* 中央揃え */
+    }
+}
+
+.dialy-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 初期状態で1列 */
+    gap: 1em; /* カード間の隙間 */
+    margin: 0 auto;
+}
+
+/* スマホ用メディアクエリ */
+@media (max-width: 600px) {
+    .dialy-container {
+        grid-template-columns: repeat(2, 1fr); /* スマホでは2列に並べる */
+        gap: 0.5em; /* カード間の隙間を小さくする */
+    }
+}
+
+/* タブレット用メディアクエリ */
+@media (min-width: 601px) and (max-width: 900px) {
+    .dialy-container {
+        grid-template-columns: repeat(3, 1fr); /* タブレットでは3列に並べる */
+    }
+}
+
+/* カードのスタイル */
+.dialy-card {
+    background-color: #f8f8f8;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
