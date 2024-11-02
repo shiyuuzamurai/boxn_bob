@@ -330,29 +330,24 @@ body {
     transition: transform 0.3s, color 0.3s;
 }
 
-/* スマホ対応 */
-@media only screen and (max-width: 768px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-icon {
-        margin: 5px; /* アイコン間のスペースを縮小 */
-    }
-
-    /* 文字サイズの調整 */
-    body {
-        font-size: 14px;
-    }
+p{
+    background-color: black;
+    color: white;
 }
 
-/* 非常に小さい画面（スマホ向け） */
-@media only screen and (max-width: 480px) {
-    .header-icon {
-        font-size: 2em; /* アイコンのサイズを小さく */
-    }
+@media screen and (max-width: 768px) {
+    p{
+        background-color: black;
+         color:green;
+     }
+ }
+ 
+ @media screen and (max-width: 480px) {
+    p{
+        background-color: black;
+         color:red;
+     }
+ }
 
     header {
         padding: 10px; /* 上下の余白を調整 */
