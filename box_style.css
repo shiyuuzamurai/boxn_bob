@@ -416,7 +416,7 @@ nav a {
 @media (max-width: 600px) {
     .link-box-container {
         grid-template-columns: repeat(2, 1fr); /* スマホでは2列に変更 */
-        max-width: 90%; /* 幅を調整して中央揃え */
+        max-width: 100%; /* 幅を調整して中央揃え */
         margin: 0 auto; /* 中央揃え */
     }
 }
@@ -425,7 +425,7 @@ nav a {
 @media (min-width: 601px) and (max-width: 900px) {
     .link-box-container {
         grid-template-columns: repeat(3, 1fr); /* タブレットでは3列に変更 */
-        max-width: 90%; /* 幅を調整して中央揃え */
+        max-width: 100%; /* 幅を調整して中央揃え */
         margin: 0 auto; /* 中央揃え */
     }
 }
@@ -467,4 +467,22 @@ nav a {
     padding: 1em;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* スマホ用 */
+@media (max-width: 600px) {
+    #background {
+        background-size: contain;
+        background-position: center;
+        height: auto;
+    }
+}
+
+/* タブレット用 */
+@media (max-width: 900px) {
+    #background {
+        background-size: contain; /* 背景がすべて見えるようにする */
+        background-position: center;
+        height: auto; /* 自然な高さに合わせる */
+    }
 }
