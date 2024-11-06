@@ -440,11 +440,20 @@ nav a {
 /* スマホ用メディアクエリ */
 @media (max-width: 600px) {
     .dialy-container {
-        grid-template-columns: repeat(2, 1fr); /* スマホでは2列に並べる */
-        gap: 0.5em; /* カード間の隙間を小さくする */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2列に並べる */
+        gap: 0.5em;
+        overflow: hidden; /* はみ出し防止 */
+        padding: 0.5em; /* 親要素に余白を持たせる */
+    }
+
+    /* 子要素の設定 */
+    .dialy-container > * {
+        width: 100%; /* 子要素が親幅を超えないように */
+        box-sizing: border-box;
+        overflow: hidden;
     }
 }
-
 /* タブレット用メディアクエリ */
 @media (min-width: 601px) and (max-width: 900px) {
     .dialy-container {
