@@ -439,19 +439,15 @@ nav a {
 
 /* スマホ用メディアクエリ */
 @media (max-width: 600px) {
-    .dialy-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2列に並べる */
-        gap: 0.5em;
-        overflow: hidden; /* はみ出し防止 */
-        padding: 0.5em; /* 親要素に余白を持たせる */
+    .link-box-container {
+        grid-template-columns: repeat(2, 1fr); /* スマホでは2列に変更 */
+        max-width: 100%; /* 幅を調整して中央揃え */
+        margin: 0 auto; /* 中央揃え */
     }
-
-    /* 子要素の設定 */
-    .dialy-container > * {
-        width: 100%; /* 子要素が親幅を超えないように */
-        box-sizing: border-box;
-        overflow: hidden;
+    .link-box {
+        padding: 0.5em; /* パディングを小さく */
+        font-size: 1em; /* フォントサイズを少し小さく */
+        border: 0.75em solid #ddd; /* ボーダー幅を減らす */
     }
 }
 /* タブレット用メディアクエリ */
