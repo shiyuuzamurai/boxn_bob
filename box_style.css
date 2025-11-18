@@ -23,20 +23,20 @@
 
 /* 基本設定 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'HiraKakuPro-W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #FFFDD0;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* ページ全体の高さを確保 */
 }
 
 header {
-    background-color: #333;
+    background-color: #f5d56a; 
     color: white;
     padding: 1.875em;
-    text-align: center;
+    text-align: center;     
 }
 
 nav ul {
@@ -50,8 +50,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    display: inline-block; /* ボタンとして機能させるため */
+    color: #333; 
     text-decoration: none;
+    background-color: #FFD700; /* ポップな黄色 */
+    padding: 0.5em 1em;
+    border: 3px solid #eff2b1;; /* ポップな色の枠線 */
+    border-radius: 10px; /* 角を丸く */
+    transition: transform 0.2s;
 }
 
 section {
@@ -60,7 +66,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: #f5d56a; 
     color: white;
     text-align: center;
     padding: 0.6250em 0;
@@ -130,14 +136,31 @@ img {
 #main.bg-1 {
     text-align: center;
 }
+
+
+
+
+
+
 /* コンテンツを背景より前に表示するための調整 */
 #gallery,#about,#main.bg-1,#dialy {
-    position: relative;             /* コンテンツの位置調整 */
-    z-index: 1;                     /* 背景より手前に配置 */
-    background-color: rgba(255, 255, 255, 0.8); /* 背景に半透明の白色を追加 */
+    position: relative;
+    z-index: 1;
+    
+    /* 変更前: border-radius: 0.6250em; */
+    /* 変更前: background-color: rgba(255, 255, 255, 0.8); */
+    
+    /* 変更後1: 太い実線ボーダーを追加 */
+    border: 5px solid #eff2b1; /* ポップな色で太い境界線 */
+    
+    /* 変更後2: 角の丸みをさらに強調（丸みが強いとゆるさが出る） */
+    border-radius: 1.5em; /* 丸みを大きく */
+    
+    /* 変更後3: 背景色の透明度をなくし、明るい白/クリーム色に変更 */
+    background-color: #FFFFFF; /* または body と異なる明るいクリーム色 #FFFFF0 など */
+    
     padding: 1.25em;
     margin: 1.25em;
-    border-radius: 0.6250em;             /* 見やすさのための丸みを追加 */
 }
 
 #main.bg-1 {
@@ -239,6 +262,32 @@ img {
 #header-glb-nav ul li a {
     font-size: 1.5em; /* お好みのサイズに調整 */
     font-weight: bold; /* 文字を太くする場合 */
+}
+
+#header {
+    /* 既存のコードを維持しつつ、必要に応じて position: relative; を確認・追加 */
+    /* 現在のCSSには設定がないため、ここで追加します */
+    position: relative; 
+}
+
+/* 2. 画像をヘッダー右上に固定配置する */
+#header-icon-right {
+    position: absolute; /* 絶対配置 */
+    top: 20px;           /* ヘッダーの上端から5px下に配置 */
+    right: 100px;         /* ヘッダーの右端から5px左に配置 */
+    width: 100px;       /* 画像の幅 (必要に応じて調整してください) */
+    height: auto;
+    z-index: 20;        /* ナビゲーションより手前に表示するため、大きなz-indexを設定 */
+    
+    /* ゆるキャラサイト向けに、わずかに傾ける遊び心 */
+    transform: rotate(5deg); 
+}
+
+
+
+nav ul li a:hover {
+    transform: scale(1.05) rotate(1deg); /* ホバー時に少し拡大し、わずかに回転させて遊び心を出す */
+    background-color: #FF6347; /* オレンジ系に変化 */
 }
 
 /* 全体のスタイル */
@@ -410,6 +459,15 @@ nav a {
     gap: 0.625em; /* セル間の隙間 */
     max-width: 80%;
     margin: 0 auto; /* 中央揃え */
+}
+
+/* 3. スマホ表示での調整（画像が邪魔にならないように） */
+@media (max-width: 600px) {
+    #header-icon-right {
+        width: 60px; /* スマホでは画像を小さくする */
+        top: 10px;
+        right: 10px;
+    }
 }
 
 /* スマホ用メディアクエリ */
