@@ -533,3 +533,48 @@ nav a {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* お知らせセクション追加スタイル */
+#news {
+    text-align: center;
+    margin-top: 1.25em;
+    position: relative;
+    z-index: 1;
+    border: 5px solid #eff2b1;
+    border-radius: 1.5em;
+    background-color: #FFFFFF;
+    padding: 1.25em;
+    margin: 1.25em;
+}
+.news-container {
+    background-color: #fff9e6; /* 薄い黄色系 */
+    border: 3px dashed #ffb6c1; /* 可愛いピンクの点線 */
+    border-radius: 1em;
+    padding: 1.5em;
+    max-width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* 軽い影 */
+    text-align: left;
+}
+.news-date {
+    display: inline-block;
+    background-color: #ffb6c1;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.2em 0.8em;
+    border-radius: 1em;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+}
+.news-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+@media (max-width: 600px) {
+    .news-container {
+        max-width: 95%;
+        padding: 1em;
+    }
+}
